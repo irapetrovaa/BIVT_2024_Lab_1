@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics.Metrics;
-using System.Runtime.InteropServices;
+﻿using System;
 
 public class Program
 {
@@ -9,15 +6,23 @@ public class Program
     {
         Program program = new Program();
 
-        //program.Task_1_1();
+         //program.Task_1_1();
+
+           // int i, s;
+            //for (i = 2; i < 35; i = i + 3)
+        //    {
+          //      s = s + i;
+          //    }
+            // Console.WriteLine("s = {0}", s);
+
         //program.Task_1_2();
         //program.Task_1_3();
-        //program.Task_1_4(0.9);
-        //program.Task_1_5(0, 2);
+   //    program.Task_1_4(0.9);
+        // program.Task_1_5(0, 2);
         //program.Task_1_6(4);
-        //program.Task_1_7();
+       // program.Task_1_7();
         //program.Task_1_8();
-        //program.Task_1_9();
+        program.Task_1_9();
         //program.Task_1_10();
         //program.Task_1_11();
         //program.Task_1_12(0.9);
@@ -52,19 +57,30 @@ public class Program
     #region Level 1
     public int Task_1_1()
     {
-        int answer = 0;
+         int answer = 0;
 
-        // code here
+        int i=0;
+        for (i = 2; i <= 35; i = i + 3) 
+        {
+            answer = answer + i;
+        }
+        Console.WriteLine("answer  = {0}", answer);
 
-        // end
-
-        return answer;
+       return answer;
     }
     public double Task_1_2()
     {
         double answer = 0;
 
         // code here
+        {
+            for(int i=1; i <10;  i++)
+            {
+
+            answer = answer + 1.0 / i;
+            }
+            Console.WriteLine("answer  = {0}", answer);
+        }
 
         // end
 
@@ -75,7 +91,11 @@ public class Program
         double answer = 0;
 
         // code here
-
+        for(int i=2; i <112; i=i + 2) 
+        {
+            answer += (i) / (i++);
+        }
+        Console.WriteLine("answer  = {0}", answer);
         // end
 
         return answer;
@@ -85,7 +105,16 @@ public class Program
         double answer = 0;
 
         // code here
-
+        double a = 1;
+        answer = Math.Cos(x);
+       
+        for (int n = 1; n<9; n++)
+        {
+            answer = answer + Math.Cos(n * x)/a ;
+          
+            a = a * x;
+        } 
+        Console.WriteLine(answer);
         // end
 
         return answer;
@@ -93,9 +122,14 @@ public class Program
     public double Task_1_5(double p, double h)
     {
         double answer = 0;
-
+        double s = 0;
         // code here
-
+        for (int i = 0; i < 9; i++)
+        {
+            
+            answer= answer +(p+i*h)*(p+i*h);
+        }
+        Console.WriteLine(answer);
         // end
 
         return answer;
@@ -105,17 +139,31 @@ public class Program
         double answer = 0;
 
         // code here
+        x = -4;
 
+        for (int i = 0; i< 17; i++ )
+        {
+            
+            answer=0.5*x*x -7*x;
+            
+            Console.WriteLine("x = {0:f2}\answer = {1:f2}", x, answer);
+            x = x + 0.5;
+        }
         // end
+        // можно не писать шаг
 
         return answer;
     }
     public int Task_1_7()
     {
-        int answer = 0;
+        int answer = 1;
 
         // code here
-
+        for (int i = 1; i< 6; i++)
+        {
+            answer = answer*i;
+        }
+        Console.WriteLine(answer);
         // end
 
         return answer;
@@ -123,9 +171,15 @@ public class Program
     public int Task_1_8()
     {
         int answer = 0;
-
+        answer = 1;
+        int y = 1;
         // code here;
-
+        for( int i= 1; i<=5; i++)
+        {
+              y =y*(i+1);
+            answer = answer + y;
+        }
+        Console.WriteLine(answer);
         // end
 
         return answer;
@@ -133,9 +187,18 @@ public class Program
     public double Task_1_9()
     {
         double answer = 0;
-
+        double n1 = -1;
+        double n2 = 5;
+        double y = 1;
         // code here;
-
+         for( double i = 1; i < 6; i++); 
+        {
+            n1 = (-1) * n1;
+            n2 = n2 * n2;
+            y = y * (i + 1);
+            answer= answer + n1*n2 /y;
+        }
+        Console.WriteLine(answer);
         // end
 
         return answer;
