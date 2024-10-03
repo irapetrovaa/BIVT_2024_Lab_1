@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 public class Program
 {
@@ -6,27 +7,39 @@ public class Program
     {
         Program program = new Program();
 
-         //program.Task_1_1();
+        //program.Task_1_1();
 
-           // int i, s;
-            //for (i = 2; i < 35; i = i + 3)
+        // int i, s;
+        //for (i = 2; i < 35; i = i + 3)
         //    {
-          //      s = s + i;
-          //    }
-            // Console.WriteLine("s = {0}", s);
+        //      s = s + i;
+        //    }
+        // Console.WriteLine("s = {0}", s);
 
         //program.Task_1_2();
         //program.Task_1_3();
-   //    program.Task_1_4(0.9);
+        //    program.Task_1_4(0.9);
         // program.Task_1_5(0, 2);
         //program.Task_1_6(4);
-       // program.Task_1_7();
+        // program.Task_1_7();
         //program.Task_1_8();
-        program.Task_1_9();
-        //program.Task_1_10();
+        //  program.Task_1_9();
+        // program.Task_1_10();
+        //  {
+        //  double answer = 0, n = 1, a;
+        //    double answer = 0, n = 1, a;
+        //    Console.ReadLine(x);
+
+        //   answer = 1;
+        //  for (int i = 1; i <= 10; i++)
+        //   {
+        //    n = x * n;
+        //   answer = answer + 1 / n;
+        //  }
+
         //program.Task_1_11();
-        //program.Task_1_12(0.9);
-        //program.Task_1_13(-1.5);
+        //program.Task_1_12();
+       // program.Task_1_13(-1.5);
         //program.Task_1_14();
         //program.Task_1_15();
         //program.Task_1_16();
@@ -190,8 +203,9 @@ public class Program
         double n1 = -1;
         double n2 = 5;
         double y = 1;
+        double i = 1;
         // code here;
-         for( double i = 1; i < 6; i++); 
+         for(; i < 6; i++); 
         {
             n1 = (-1) * n1;
             n2 = n2 * n2;
@@ -206,24 +220,45 @@ public class Program
     public int Task_1_10()
     {
         int answer = 0;
-
+        answer = 1;
         // code here
-
+        for(int i= 1; i <= 7; i++)
+        {
+            answer = answer * 3;
+        }
         // end
-
+        Console.WriteLine(answer);
         return answer;
     }
     public void Task_1_11()
     {
         // There is no test for this task
+     
+        for( int i=1; i <= 6; i++ )
+        {
+            Console.WriteLine(i);
+        }
+        for (int i = 1; i <= 6; i++)
+        {
+            Console.WriteLine(5);
+        }
 
         // code here
 
     }
     public double Task_1_12(double x)
     {
-        double answer = 0;
+        
+        double answer = 0, n = 1;
+        answer = 1;
+        for(int i=1; i <= 10; i++)
+        {
+            n = x * n;
+            answer = answer + 1/n;
+        }
 
+        answer = Math.Round(answer, 2);
+        Console.WriteLine(answer);
         // code here
 
         // end
@@ -232,10 +267,25 @@ public class Program
     }
     public double Task_1_13(double x)
     {
+       
         double answer = 0;
-
-        // code here
-
+        if (x <= -1)
+        {
+            answer = 1;
+            Console.WriteLine(answer);
+        }
+        else
+            if (x <= 1 && x > -1)
+        {
+            answer = -x;
+            Console.WriteLine(answer);
+        }
+        else if (x > 1)
+        {
+            answer = -1;
+            // code here
+            Console.WriteLine(answer);
+        }
         // end
 
         return answer;
